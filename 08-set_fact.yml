@@ -7,8 +7,8 @@
 
     - name: declaring standard variable
       ansible.builtin.set_fact:
-        status = "{{ out.rc }}"
+        exit_status: "{{ out.rc }}"
 
     - name: printing standard varialbe
       ansible.builtin.debug:
-        msg: "{{ status }}"
+        msg: "{{ exit_status }}"
