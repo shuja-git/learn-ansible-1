@@ -1,0 +1,6 @@
+- name: Play for inventory variable
+  hosts: all
+  tasks:
+    - name: printing variable from inventory
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
