@@ -1,0 +1,14 @@
+- name: Play for declaring standard variable
+  hosts: APP
+  tasks:
+    - name: storing in variable
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: declaring standard variable
+      ansible.builtin.set_fact:
+        exit_status = "{{ out.rc }}"
+
+    - name: printing standard varialbe
+      ansible.builtin.debug:
+        msg: "{{ exit_status }}"
