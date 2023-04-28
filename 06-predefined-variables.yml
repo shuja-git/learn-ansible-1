@@ -1,0 +1,6 @@
+- name: Play for pre-defined variables
+  hosts: APP
+  tasks:
+    - name: printing remote node values using pre-defined variables
+      ansible.builtin.debug:
+        msg: "Host name is {{ ansible_hostname }}"
