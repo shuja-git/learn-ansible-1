@@ -1,0 +1,8 @@
+- name: Play for file level variable
+  hosts: localhost
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: printing variables from file
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
