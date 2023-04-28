@@ -1,0 +1,11 @@
+- name: Play for registering a variable
+  hosts: APP
+  tasks:
+    - name: task to register uptime command
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: printing out variable
+      ansible.builtin.debug:
+        msg: "{{ out }}"
+
