@@ -1,5 +1,5 @@
 - name: Play for declaring standard variable
-  hosts: APP
+  hosts: all
   tasks:
     - name: storing in variable
       ansible.builtin.shell: uptime
