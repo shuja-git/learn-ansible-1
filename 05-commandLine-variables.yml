@@ -1,0 +1,6 @@
+- name: Play for command line variables
+  hosts: localhost
+  tasks:
+    - name: printing command line variables
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
